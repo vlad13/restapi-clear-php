@@ -38,8 +38,11 @@ composer install
 И дать права на запись в файл:
 
 touch error-local.log
+
 sudo chown www-data:www-data error-local.log
+
 chmod 664 error-local.log
+
 
 7. Настроить работу сайта на apache2/nginx.
 Точка входа - /public/index.php
