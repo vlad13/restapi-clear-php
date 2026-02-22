@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Всё направляем в index.php
+RewriteRule ^ index.php [L]
