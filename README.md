@@ -16,8 +16,8 @@
 
 2. Клонировать репозиторий
 ~~~
-git clone https://...
-cd project
+git clone https://github.com/vlad13/restapi-clear-php my-folder-name
+cd my-folder-name
 ~~~
 
 3. Установить пакеты композера
@@ -25,7 +25,7 @@ composer update
 
 4. Нужно создать на сервере базу данных
 
-5. Загрузить файл project/database/schema.sql в базу данных.
+5. Загрузить файл /database/schema.sql в базу данных.
 Или выполнить команды из файла вручную в mysql.
 
 6. Файл .env.example переименовать в .env 
@@ -34,7 +34,7 @@ composer update
 
 Поскольку логи пишется от имени польвателя www-data (вероятнее всего), 
 то будет необходимо создать файл для логов вручную, 
-например создать файл error-local.log в директории project
+например создать файл error-local.log в директории проекта
 И дать права на запись в файл:
 
 touch error-local.log
@@ -42,7 +42,7 @@ sudo chown www-data:www-data error-local.log
 chmod 664 error-local.log
 
 7. Настроить работу сайта на apache2/nginx.
-Точка входа - project/public/index.php
+Точка входа - /public/index.php
 
 Проверка: в браузере по адресу http://[мой-сайт]/api/projects 
 в ответе должны вернутся данные проектов из таблицы projects
