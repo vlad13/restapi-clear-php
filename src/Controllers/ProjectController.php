@@ -22,9 +22,6 @@ class ProjectController
 
     public function index(Request $request): string
     {
-        $a = 1;
-        $b = 0;
-        $c = $a/$b;
         $status = Status::searchByValue($request->data['status'] ?? '')?->value;
         $filters = new ProjectFilterDto(
             status:$status

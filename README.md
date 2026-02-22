@@ -21,7 +21,7 @@ cd my-folder-name
 ~~~
 
 3. Установить пакеты композера
-composer update
+composer install
 
 4. Нужно создать на сервере базу данных
 
